@@ -1,0 +1,12 @@
+.Modal {position:absolute; top:0; right:0; bottom:0; left:0; z-index:10;}
+.Modal > div {background:rgba(0,0,0,0.8); position:absolute; top:0; right:0; bottom:0; left:0; z-index:10;}
+.Modal > dl {width:80%; height:80%; padding:20px; border-radius: 20px; background:#fff; display:flex; justify-content:space-between; position:absolute; top:60px; left:50%; transform:translateX(-50%); z-index: 15;}
+.Modal dt {width:66%;}
+.Modal > dt > img {max-width:100%;}
+.Modal dd {width:30%; display:flex; flex-direction:column;}
+.Modal dd > h4 {margin-bottom:20px; font-size:24px; font-weight:600;}
+.Modal dd > p {flex:1;}
+.Modal dd > span {margin-bottom:10px; font-size:12px;}
+.Modal dd > button {padding:15px; color:#fff; border-radius: 10px;; background:#B93459}
+.Modal ul {color:#fff; display:flex; align-items:center; position:absolute; top:10px; right:20px; z-index:15}
+.Modal ul li:first-of-type {margin-right: 10px;}

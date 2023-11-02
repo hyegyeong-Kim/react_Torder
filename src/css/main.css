@@ -1,0 +1,13 @@
+.main_Container {padding:20px; height:inherit; border:2px solid green; box-sizing:border-box; display:flex; flex-direction:column; flex:1; position:relative}
+.main_Container > ul {margin-bottom:10px; display:flex;}
+.main_Container > ul > li:first-of-type {margin-right:10px;}
+
+.Menu_Bottom {display:flex; justify-content:space-between; position:absolute; left:20px; right:20px; bottom:20px;}
+.Menu_Bottom > ul {display:flex;}
+.Menu_Bottom > ul > li {margin-right:10px;}
+.Menu_Bottom > ul > li:last-of-type,  .Menu_Bottom > div > p:last-of-type{margin-right:0;}
+.Menu_Bottom > div {display:flex;}
+.Menu_Bottom > div > button:first-of-type {margin-right:10px;}
+.TostPop {width:50%; height:20%;padding:20px; background-color: coral; box-sizing:border-box; position:absolute; left:50%; top:50%; z-index:10; transform:translate(-50%,-50%);}
+.TostPop > span {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+.TostPop > button {position:absolute; right: 20px; top:10px;}
