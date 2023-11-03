@@ -1,6 +1,6 @@
 import styles from '../css/Modal.module.css'
 
-function Modal ({openModal, setModal, List_Data, index}){
+function Modal ({openModal, setModal, List_Data, index, setCart}){
   return (
     <div className={styles.Modal}>
       <div></div>
@@ -18,7 +18,10 @@ function Modal ({openModal, setModal, List_Data, index}){
                   가격은 원화로 표기됩니다. <br/> 10% 부가세와 10% 봉사료가 
                   포함되어 있습니다.
                 </span>
-                <button>장바구니 담기</button>
+                <button onClick={()=>{
+                  setCart(true);
+                  setModal(!openModal)
+                }}>장바구니 담기</button>
               </dd>
             </dl>
             )

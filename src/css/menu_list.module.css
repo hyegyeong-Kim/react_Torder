@@ -1,4 +1,4 @@
-.menu_List {height: 450px; border:2px solid orange; overflow:auto;}
+.menu_List {height: 450px; overflow:auto;}
 .menu_List > ul {display:flex; flex-wrap:wrap; gap:30px}
 .menu_List > ul > li {width:30%; text-align:center;}
 /* dt {width:30%;} */

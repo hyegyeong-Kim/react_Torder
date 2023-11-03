@@ -2,11 +2,19 @@
 import '../css/main.css';
 import Menu_List from '../component/menu_List'
 // import TosPop from './tostPop';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
-function Main_Container ({openModal, setModal , List_Data, handleChangeValue}){
+function Main_Container ({openModal, setModal , List_Data, handleChangeValue,}){
   let [PopUp, setPopUp] = useState(false);
+  const handleToast = () => {
+    setPopUp(true);
+  };
+  useEffect(() => {
+    if (PopUp) {
+      setTimeout(() => setPopUp(false), 1500);
+    }
+  }, [PopUp]);
 
   return(
     <div className="main_Container">
@@ -24,19 +32,21 @@ function Main_Container ({openModal, setModal , List_Data, handleChangeValue}){
           <li>일본어</li>
         </ul>
         <div>
-          <button onClick={()=>{setPopUp(true)}}>주문내역</button>
-          <button onClick={()=>{setPopUp(true)}}>장바구니</button>
+          <button onClick={handleToast}>주문내역</button>
+          <button onClick={handleToast}>장바구니</button>
         </div>
       </div>
       {
         PopUp == true ? <TostPop PopUp={PopUp} setPopUp={setPopUp}></TostPop> : null
       }
-
+     
     </div>
   )
 }
 
 function TostPop (props){
+  
+  
   return (
     <div className="TostPop">
       <span>장바구니가 비었습니다.</span>
@@ -44,6 +54,7 @@ function TostPop (props){
     </div>
   )
 }
+
 
 
 
